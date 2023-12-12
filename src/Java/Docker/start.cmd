@@ -1,0 +1,1 @@
+docker-compose -p dokumentoobor8-java up -d

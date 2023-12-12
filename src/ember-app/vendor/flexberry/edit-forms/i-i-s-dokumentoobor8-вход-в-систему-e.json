@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": "авПользователи",
+      "displayAttributeName": "логин",
+      "required": true,
+      "relationName": "ТЧПользователь.АвПользователи",
+      "projection": "АвПользователиL",
+      "detailModelName": "i-i-s-dokumentoobor8-т-ч-пользователь"
+    }
+  ],
+  "external": false,
+  "caption": "Вход в систему",
+  "name": "IISDokumentoobor8ВходВСистемуE",
+  "className": "ВходВСистемуE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-dokumentoobor8-вход-в-систему",
+      "modelProjection": "ВходВСистемуE"
+    }
+  ]
+}

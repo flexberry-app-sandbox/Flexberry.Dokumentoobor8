@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-dokumentoobor8-форма-документа-e",
+  "editForm": "i-i-s-dokumentoobor8-форма-документа-e",
+  "external": false,
+  "caption": "Форма документа",
+  "name": "IISDokumentoobor8ФормаДокументаL",
+  "className": "ФормаДокументаL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-dokumentoobor8-форма-документа",
+      "modelProjection": "ФормаДокументаL"
+    }
+  ]
+}

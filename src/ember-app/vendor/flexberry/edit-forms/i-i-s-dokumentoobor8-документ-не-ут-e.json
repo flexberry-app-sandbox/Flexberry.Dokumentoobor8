@@ -1,0 +1,31 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": "формаДокумента",
+      "displayAttributeName": "наименование",
+      "required": true,
+      "relationName": "ТЧСоздДок.ФормаДокумента",
+      "projection": "ФормаДокументаL",
+      "detailModelName": "i-i-s-dokumentoobor8-т-ч-созд-док"
+    },
+    {
+      "master": "утверждениеДок",
+      "displayAttributeName": "дата",
+      "required": true,
+      "relationName": "ТЧУтвержДок.УтверждениеДок",
+      "projection": "УтверждениеДокL",
+      "detailModelName": "i-i-s-dokumentoobor8-т-ч-утверж-док"
+    }
+  ],
+  "external": false,
+  "caption": "Документ не ут",
+  "name": "IISDokumentoobor8ДокументНеУтE",
+  "className": "ДокументНеУтE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-dokumentoobor8-хр-док",
+      "modelProjection": "ДокументНеУтE"
+    }
+  ]
+}

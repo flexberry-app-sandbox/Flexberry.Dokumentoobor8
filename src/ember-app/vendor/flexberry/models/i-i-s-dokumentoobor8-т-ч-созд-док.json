@@ -1,0 +1,66 @@
+﻿{
+  "name": "IISDokumentoobor8ТЧСоздДок",
+  "modelName": "i-i-s-dokumentoobor8-т-ч-созд-док",
+  "className": "ТЧСоздДок",
+  "nameSpace": "IIS.Dokumentoobor8",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "формаДокумента",
+      "relatedTo": "i-i-s-dokumentoobor8-форма-документа",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "хрДок",
+      "relatedTo": "i-i-s-dokumentoobor8-хр-док",
+      "inverse": "тЧСоздДок"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ТЧСоздДокE",
+      "modelName": "i-i-s-dokumentoobor8-т-ч-созд-док",
+      "attrs": [],
+      "belongsTo": [
+        {
+          "lookupValue": "Наименование",
+          "lookupValueField": "наименование",
+          "relationName": "ФормаДокумента",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "дата",
+              "caption": "Дата заполнения",
+              "hidden": false,
+              "index": 1
+            },
+            {
+              "name": "наименование",
+              "caption": "Наименование",
+              "hidden": true,
+              "index": 2
+            }
+          ],
+          "index": 0,
+          "type": "standard",
+          "caption": "Форма документа",
+          "name": "формаДокумента",
+          "relatedTo": "i-i-s-dokumentoobor8-форма-документа",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

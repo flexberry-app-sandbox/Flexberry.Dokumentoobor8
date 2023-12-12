@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-dokumentoobor8-ав-пользователи-e",
+  "editForm": "i-i-s-dokumentoobor8-ав-пользователи-e",
+  "external": false,
+  "caption": "Ав пользователи",
+  "name": "IISDokumentoobor8АвПользователиL",
+  "className": "АвПользователиL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-dokumentoobor8-ав-пользователи",
+      "modelProjection": "АвПользователиL"
+    }
+  ]
+}

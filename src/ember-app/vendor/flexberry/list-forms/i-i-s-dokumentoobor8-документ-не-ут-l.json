@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-dokumentoobor8-документ-не-ут-e",
+  "editForm": "i-i-s-dokumentoobor8-документ-не-ут-e",
+  "external": false,
+  "caption": "Документ не ут",
+  "name": "IISDokumentoobor8ДокументНеУтL",
+  "className": "ДокументНеУтL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-dokumentoobor8-хр-док",
+      "modelProjection": "ДокументНеУтL"
+    }
+  ]
+}

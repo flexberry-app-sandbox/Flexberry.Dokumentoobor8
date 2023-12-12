@@ -1,0 +1,106 @@
+<h3 class="ui header">{{t "forms.i-i-s-dokumentoobor8-форма-документа-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-dokumentoobor8-форма-документа-e.дата-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.дата
+      class=(if (v-get validationModel "дата" "isInvalid") "error")
+      data-test-i-i-s-dokumentoobor8-форма-документа-e-дата=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "дата" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.наименование
+      class=(if (v-get validationModel "наименование" "isInvalid") "error")
+      label=(t "forms.i-i-s-dokumentoobor8-форма-документа-e.наименование-caption")
+      data-test-i-i-s-dokumentoobor8-форма-документа-e-наименование=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "наименование" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.содержание
+      class=(if (v-get validationModel "содержание" "isInvalid") "error")
+      label=(t "forms.i-i-s-dokumentoobor8-форма-документа-e.содержание-caption")
+      data-test-i-i-s-dokumentoobor8-форма-документа-e-содержание=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "содержание" "message")}}
+  </div>
+  <div class="field" data-test-i-i-s-dokumentoobor8-форма-документа-e-отделы="true">
+    <label>{{t "forms.i-i-s-dokumentoobor8-форма-документа-e.отделы-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-dokumentoobor8-отделы")
+      value=model.отделы
+      class=(if (v-get validationModel "отделы" "isInvalid") "error")
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "отделы" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-dokumentoobor8-форма-документа-e.авПользователи-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.авПользователи
+      displayAttributeName="iDПользователя"
+      autocomplete=true
+      relationName="авПользователи"
+      projection="АвПользователиL"
+      title=(t "forms.i-i-s-dokumentoobor8-форма-документа-e.авПользователи-caption")
+      readonly=readonly
+      componentName="авПользователиLookup"
+      class=(if (v-get validationModel "авПользователи" "isInvalid") "error")
+      data-test-i-i-s-dokumentoobor8-форма-документа-e-авПользователи=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "авПользователи" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.авПользователи.iDПользователя
+      class=(if (v-get validationModel.авПользователи "iDПользователя" "isInvalid") "error")
+      label=(t "forms.i-i-s-dokumentoobor8-форма-документа-e.авПользователи.iDПользователя-caption")
+      data-test-i-i-s-dokumentoobor8-форма-документа-e-авПользователи-iDПользователя=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.авПользователи "iDПользователя" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.авПользователи.сотрудники.фИОСотрудника
+      class=(if (v-get validationModel.авПользователи.сотрудники "фИОСотрудника" "isInvalid") "error")
+      label=(t "forms.i-i-s-dokumentoobor8-форма-документа-e.авПользователи.сотрудники.фИОСотрудника-caption")
+      data-test-i-i-s-dokumentoobor8-форма-документа-e-авПользователи-сотрудники-фИОСотрудника=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.авПользователи.сотрудники "фИОСотрудника" "message")}}
+  </div>
+</form>

@@ -1,0 +1,64 @@
+﻿{
+  "applicationCaption": "Dokumentoobor8",
+  "applicationTitle": "Dokumentoobor8",
+  "items": [
+    {
+      "link": null,
+      "menuName": "dokumentoobor8",
+      "caption": "Dokumentoobor8",
+      "title": "Dokumentoobor8",
+      "children": [
+        {
+          "link": "i-i-s-dokumentoobor8-форма-документа-l",
+          "menuName": null,
+          "caption": "Форма документа",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-dokumentoobor8-утверждение-док-l",
+          "menuName": null,
+          "caption": "Утверждение док",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-dokumentoobor8-документ-не-ут-l",
+          "menuName": null,
+          "caption": "Документ не ут",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-dokumentoobor8-ав-пользователи-l",
+          "menuName": null,
+          "caption": "Ав пользователи",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-dokumentoobor8-сотрудники-l",
+          "menuName": null,
+          "caption": "Сотрудники",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-dokumentoobor8-должность-l",
+          "menuName": null,
+          "caption": "Должность",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-dokumentoobor8-вход-в-систему-l",
+          "menuName": null,
+          "caption": "Вход в систему",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

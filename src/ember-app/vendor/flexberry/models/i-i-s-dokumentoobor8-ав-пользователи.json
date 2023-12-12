@@ -1,0 +1,183 @@
+﻿{
+  "name": "IISDokumentoobor8АвПользователи",
+  "modelName": "i-i-s-dokumentoobor8-ав-пользователи",
+  "className": "АвПользователи",
+  "nameSpace": "IIS.Dokumentoobor8",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "iDПользователя",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "датаРегистрации",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "логин",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "пароль",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "сотрудники",
+      "relatedTo": "i-i-s-dokumentoobor8-сотрудники",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "тЧПрава",
+      "relatedTo": "i-i-s-dokumentoobor8-т-ч-права",
+      "inverse": "авПользователи"
+    }
+  ],
+  "projections": [
+    {
+      "name": "АвПользователиE",
+      "modelName": "i-i-s-dokumentoobor8-ав-пользователи",
+      "attrs": [
+        {
+          "name": "датаРегистрации",
+          "caption": "Дата регистрации",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "iDПользователя",
+          "caption": "I d пользователя",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "логин",
+          "caption": "Логин",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "пароль",
+          "caption": "Пароль",
+          "hidden": false,
+          "index": 5
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "ФИОСотрудника",
+          "lookupValueField": "фИОСотрудника",
+          "relationName": "Сотрудники",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фИОСотрудника",
+              "caption": "Ф и о сотрудника",
+              "hidden": true,
+              "index": 3
+            }
+          ],
+          "index": 2,
+          "type": "standard",
+          "caption": "Сотрудники",
+          "name": "сотрудники",
+          "relatedTo": "i-i-s-dokumentoobor8-сотрудники",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "ТЧПраваE",
+          "caption": "Права Пользователя",
+          "name": "тЧПрава",
+          "relatedTo": "i-i-s-dokumentoobor8-т-ч-права",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "АвПользователиL",
+      "modelName": "i-i-s-dokumentoobor8-ав-пользователи",
+      "attrs": [
+        {
+          "name": "датаРегистрации",
+          "caption": "Дата регистрации",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "iDПользователя",
+          "caption": "I d пользователя",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "логин",
+          "caption": "Логин",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "пароль",
+          "caption": "Пароль",
+          "hidden": false,
+          "index": 4
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Сотрудники",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фИОСотрудника",
+              "caption": "ФИО сотрудника",
+              "hidden": false,
+              "index": 2
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "ФИО сотрудника",
+          "name": "сотрудники",
+          "relatedTo": "i-i-s-dokumentoobor8-сотрудники",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

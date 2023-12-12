@@ -1,0 +1,220 @@
+﻿{
+  "name": "IISDokumentoobor8УтверждениеДок",
+  "modelName": "i-i-s-dokumentoobor8-утверждение-док",
+  "className": "УтверждениеДок",
+  "nameSpace": "IIS.Dokumentoobor8",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "дата",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "Now",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "утверждение",
+      "type": "i-i-s-dokumentoobor8-утверждение",
+      "flexberryType": "Утверждение",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "авПользователи",
+      "relatedTo": "i-i-s-dokumentoobor8-ав-пользователи",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "формаДокумента",
+      "relatedTo": "i-i-s-dokumentoobor8-форма-документа",
+      "inverse": null
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "УтверждениеДокE",
+      "modelName": "i-i-s-dokumentoobor8-утверждение-док",
+      "attrs": [
+        {
+          "name": "дата",
+          "caption": "Дата утверждения",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "утверждение",
+          "caption": "Статус",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Наименование",
+          "lookupValueField": "наименование",
+          "relationName": "ФормаДокумента",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "наименование",
+              "caption": "Наименование",
+              "hidden": true,
+              "index": 3
+            }
+          ],
+          "index": 2,
+          "type": "standard",
+          "caption": "Форма документа",
+          "name": "формаДокумента",
+          "relatedTo": "i-i-s-dokumentoobor8-форма-документа",
+          "inverse": null
+        },
+        {
+          "lookupValue": "IDПользователя",
+          "lookupValueField": "iDПользователя",
+          "relationName": "АвПользователи",
+          "belongsTo": [
+            {
+              "lookupValue": null,
+              "lookupValueField": null,
+              "relationName": "АвПользователи.Сотрудники",
+              "belongsTo": [],
+              "hidden": false,
+              "attrs": [
+                {
+                  "name": "фИОСотрудника",
+                  "caption": "ФИО Сотрудника",
+                  "hidden": false,
+                  "index": 6
+                }
+              ],
+              "index": -1,
+              "type": null,
+              "caption": "",
+              "name": "сотрудники",
+              "relatedTo": "i-i-s-dokumentoobor8-сотрудники",
+              "inverse": null
+            }
+          ],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "iDПользователя",
+              "caption": "ID Пользователя",
+              "hidden": false,
+              "index": 5
+            }
+          ],
+          "index": 4,
+          "type": "standard",
+          "caption": "Ав пользователи",
+          "name": "авПользователи",
+          "relatedTo": "i-i-s-dokumentoobor8-ав-пользователи",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "УтверждениеДокL",
+      "modelName": "i-i-s-dokumentoobor8-утверждение-док",
+      "attrs": [
+        {
+          "name": "дата",
+          "caption": "Дата утверждения",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "утверждение",
+          "caption": "Статус",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "ФормаДокумента",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "наименование",
+              "caption": "Наименование",
+              "hidden": false,
+              "index": 2
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Наименование",
+          "name": "формаДокумента",
+          "relatedTo": "i-i-s-dokumentoobor8-форма-документа",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "АвПользователи",
+          "belongsTo": [
+            {
+              "lookupValue": null,
+              "lookupValueField": null,
+              "relationName": "АвПользователи.Сотрудники",
+              "belongsTo": [],
+              "hidden": false,
+              "attrs": [
+                {
+                  "name": "фИОСотрудника",
+                  "caption": "ФИО Сотрудника",
+                  "hidden": false,
+                  "index": 4
+                }
+              ],
+              "index": -1,
+              "type": null,
+              "caption": "",
+              "name": "сотрудники",
+              "relatedTo": "i-i-s-dokumentoobor8-сотрудники",
+              "inverse": null
+            }
+          ],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "iDПользователя",
+              "caption": "ID Пользователя",
+              "hidden": false,
+              "index": 3
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "ID Пользователя",
+          "name": "авПользователи",
+          "relatedTo": "i-i-s-dokumentoobor8-ав-пользователи",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

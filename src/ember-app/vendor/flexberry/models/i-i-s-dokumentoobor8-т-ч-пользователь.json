@@ -1,0 +1,94 @@
+﻿{
+  "name": "IISDokumentoobor8ТЧПользователь",
+  "modelName": "i-i-s-dokumentoobor8-т-ч-пользователь",
+  "className": "ТЧПользователь",
+  "nameSpace": "IIS.Dokumentoobor8",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "авПользователи",
+      "relatedTo": "i-i-s-dokumentoobor8-ав-пользователи",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "входВСистему",
+      "relatedTo": "i-i-s-dokumentoobor8-вход-в-систему",
+      "inverse": "тЧПользователь"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ТЧПользовательE",
+      "modelName": "i-i-s-dokumentoobor8-т-ч-пользователь",
+      "attrs": [],
+      "belongsTo": [
+        {
+          "lookupValue": "Логин",
+          "lookupValueField": "логин",
+          "relationName": "АвПользователи",
+          "belongsTo": [
+            {
+              "lookupValue": null,
+              "lookupValueField": null,
+              "relationName": "АвПользователи.Сотрудники",
+              "belongsTo": [],
+              "hidden": false,
+              "attrs": [
+                {
+                  "name": "фИОСотрудника",
+                  "caption": "ФИО Сотрудника",
+                  "hidden": false,
+                  "index": 2
+                }
+              ],
+              "index": -1,
+              "type": null,
+              "caption": "",
+              "name": "сотрудники",
+              "relatedTo": "i-i-s-dokumentoobor8-сотрудники",
+              "inverse": null
+            }
+          ],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "iDПользователя",
+              "caption": "ID пользователя",
+              "hidden": false,
+              "index": 1
+            },
+            {
+              "name": "логин",
+              "caption": "Логин",
+              "hidden": true,
+              "index": 3
+            },
+            {
+              "name": "пароль",
+              "caption": "Пароль",
+              "hidden": false,
+              "index": 4
+            }
+          ],
+          "index": 0,
+          "type": "standard",
+          "caption": "Ав пользователи",
+          "name": "авПользователи",
+          "relatedTo": "i-i-s-dokumentoobor8-ав-пользователи",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

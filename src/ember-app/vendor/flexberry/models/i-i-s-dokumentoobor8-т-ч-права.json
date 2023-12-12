@@ -1,0 +1,48 @@
+﻿{
+  "name": "IISDokumentoobor8ТЧПрава",
+  "modelName": "i-i-s-dokumentoobor8-т-ч-права",
+  "className": "ТЧПрава",
+  "nameSpace": "IIS.Dokumentoobor8",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "праваПол",
+      "type": "i-i-s-dokumentoobor8-права-пол",
+      "flexberryType": "ПраваПол",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "авПользователи",
+      "relatedTo": "i-i-s-dokumentoobor8-ав-пользователи",
+      "inverse": "тЧПрава"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ТЧПраваE",
+      "modelName": "i-i-s-dokumentoobor8-т-ч-права",
+      "attrs": [
+        {
+          "name": "праваПол",
+          "caption": "Права пол",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

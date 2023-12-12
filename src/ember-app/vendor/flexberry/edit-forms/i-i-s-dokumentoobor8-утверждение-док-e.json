@@ -1,0 +1,31 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "ФормаДокумента",
+      "projection": "ФормаДокументаL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "АвПользователи",
+      "projection": "АвПользователиL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Утверждение док",
+  "name": "IISDokumentoobor8УтверждениеДокE",
+  "className": "УтверждениеДокE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-dokumentoobor8-утверждение-док",
+      "modelProjection": "УтверждениеДокE"
+    }
+  ]
+}

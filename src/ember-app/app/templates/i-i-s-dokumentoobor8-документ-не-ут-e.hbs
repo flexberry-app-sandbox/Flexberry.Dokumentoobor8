@@ -1,0 +1,66 @@
+<h3 class="ui header">{{t "forms.i-i-s-dokumentoobor8-документ-не-ут-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-dokumentoobor8-документ-не-ут-e.датаСохранения-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.датаСохранения
+      class=(if (v-get validationModel "датаСохранения" "isInvalid") "error")
+      data-test-i-i-s-dokumentoobor8-документ-не-ут-e-датаСохранения=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "датаСохранения" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-dokumentoobor8-документ-не-ут-e.тЧСоздДок-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="тЧСоздДокGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.тЧСоздДок
+      content=model.тЧСоздДок
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "тЧСоздДок" "isInvalid") "error")
+      data-test-i-i-s-dokumentoobor8-документ-не-ут-e-тЧСоздДок=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "тЧСоздДок" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-dokumentoobor8-документ-не-ут-e.тЧУтвержДок-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="тЧУтвержДокGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.тЧУтвержДок
+      content=model.тЧУтвержДок
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "тЧУтвержДок" "isInvalid") "error")
+      data-test-i-i-s-dokumentoobor8-документ-не-ут-e-тЧУтвержДок=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "тЧУтвержДок" "message")}}
+  </div>
+</form>

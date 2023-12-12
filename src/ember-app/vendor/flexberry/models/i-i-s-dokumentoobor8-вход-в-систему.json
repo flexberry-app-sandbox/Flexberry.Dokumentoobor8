@@ -1,0 +1,68 @@
+﻿{
+  "name": "IISDokumentoobor8ВходВСистему",
+  "modelName": "i-i-s-dokumentoobor8-вход-в-систему",
+  "className": "ВходВСистему",
+  "nameSpace": "IIS.Dokumentoobor8",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "датаВхода",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "Now",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [
+    {
+      "name": "тЧПользователь",
+      "relatedTo": "i-i-s-dokumentoobor8-т-ч-пользователь",
+      "inverse": "входВСистему"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ВходВСистемуE",
+      "modelName": "i-i-s-dokumentoobor8-вход-в-систему",
+      "attrs": [
+        {
+          "name": "датаВхода",
+          "caption": "Дата входа",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": [
+        {
+          "projectionName": "ТЧПользовательE",
+          "caption": "Т ч пользователь",
+          "name": "тЧПользователь",
+          "relatedTo": "i-i-s-dokumentoobor8-т-ч-пользователь",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "ВходВСистемуL",
+      "modelName": "i-i-s-dokumentoobor8-вход-в-систему",
+      "attrs": [
+        {
+          "name": "датаВхода",
+          "caption": "Дата входа",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}
