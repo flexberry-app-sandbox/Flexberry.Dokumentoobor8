@@ -86,16 +86,6 @@
   <div class="field">
     {{flexberry-field
       readonly=true
-      value=model.авПользователи.iDПользователя
-      class=(if (v-get validationModel.авПользователи "iDПользователя" "isInvalid") "error")
-      label=(t "forms.i-i-s-dokumentoobor8-форма-документа-e.авПользователи.iDПользователя-caption")
-      data-test-i-i-s-dokumentoobor8-форма-документа-e-авПользователи-iDПользователя=true
-    }}
-    {{flexberry-validationmessage error=(v-get validationModel.авПользователи "iDПользователя" "message")}}
-  </div>
-  <div class="field">
-    {{flexberry-field
-      readonly=true
       value=model.авПользователи.сотрудники.фИОСотрудника
       class=(if (v-get validationModel.авПользователи.сотрудники "фИОСотрудника" "isInvalid") "error")
       label=(t "forms.i-i-s-dokumentoobor8-форма-документа-e.авПользователи.сотрудники.фИОСотрудника-caption")

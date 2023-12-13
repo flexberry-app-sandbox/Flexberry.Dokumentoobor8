@@ -35,7 +35,6 @@ namespace IIS.Dokumentoobor8
             "Содержание as \'Содержание документа\'",
             "Отделы as \'Получаемый отдел\'",
             "АвПользователи as \'Ав пользователи\'",
-            "АвПользователи.IDПользователя as \'ID пользователя\'",
             "АвПользователи.Сотрудники.ФИОСотрудника as \'ФИО Сотрудника\'"})]
     [MasterViewDefineAttribute("ФормаДокументаE", "АвПользователи", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "IDПользователя")]
     [View("ФормаДокументаL", new string[] {
@@ -43,7 +42,6 @@ namespace IIS.Dokumentoobor8
             "Наименование as \'Наименование документа\'",
             "Содержание as \'Содержание документа\'",
             "Отделы as \'Получаемый отдел\'",
-            "АвПользователи.IDПользователя as \'ID пользователя\'",
             "АвПользователи.Сотрудники.ФИОСотрудника as \'ФИО сотрудника\'"})]
     public class ФормаДокумента : ICSSoft.STORMNET.DataObject
     {
@@ -221,6 +219,18 @@ namespace IIS.Dokumentoobor8
 
                 // *** End programmer edit section *** (ФормаДокумента.АвПользователи Set end)
             }
+        }
+        
+        // *** Start programmer edit section *** (ФормаДокумента.отправить CustomAttributes)
+
+        // *** End programmer edit section *** (ФормаДокумента.отправить CustomAttributes)
+        [ICSSoft.STORMNET.AccessType(ICSSoft.STORMNET.AccessType.none)]
+        public virtual void отправить()
+        {
+            // *** Start programmer edit section *** (ФормаДокумента.отправить method implementation)
+
+            return;
+            // *** End programmer edit section *** (ФормаДокумента.отправить method implementation)
         }
         
         /// <summary>

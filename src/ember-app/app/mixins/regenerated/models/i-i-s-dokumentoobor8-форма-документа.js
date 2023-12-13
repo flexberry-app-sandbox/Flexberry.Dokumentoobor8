@@ -54,9 +54,8 @@ export let defineProjections = function (modelClass) {
     содержание: attr('Содержание документа', { index: 2 }),
     отделы: attr('Получаемый отдел', { index: 3 }),
     авПользователи: belongsTo('i-i-s-dokumentoobor8-ав-пользователи', 'Ав пользователи', {
-      iDПользователя: attr('ID пользователя', { index: 5 }),
       сотрудники: belongsTo('i-i-s-dokumentoobor8-сотрудники', '', {
-        фИОСотрудника: attr('ФИО Сотрудника', { index: 6 })
+        фИОСотрудника: attr('ФИО Сотрудника', { index: 5 })
       }, { index: -1, hidden: true })
     }, { index: 4, displayMemberPath: 'iDПользователя' })
   });
@@ -66,10 +65,9 @@ export let defineProjections = function (modelClass) {
     наименование: attr('Наименование документа', { index: 1 }),
     содержание: attr('Содержание документа', { index: 2 }),
     отделы: attr('Получаемый отдел', { index: 3 }),
-    авПользователи: belongsTo('i-i-s-dokumentoobor8-ав-пользователи', 'ID пользователя', {
-      iDПользователя: attr('ID пользователя', { index: 4 }),
+    авПользователи: belongsTo('i-i-s-dokumentoobor8-ав-пользователи', 'ФИО сотрудника', {
       сотрудники: belongsTo('i-i-s-dokumentoobor8-сотрудники', '', {
-        фИОСотрудника: attr('ФИО сотрудника', { index: 5 })
+        фИОСотрудника: attr('ФИО сотрудника', { index: 4 })
       }, { index: -1, hidden: true })
     }, { index: -1, hidden: true })
   });

@@ -22,43 +22,42 @@ export default Controller.extend({
             link: 'i-i-s-dokumentoobor8-форма-документа-l',
             caption: i18n.t('forms.application.sitemap.dokumentoobor8.i-i-s-dokumentoobor8-форма-документа-l.caption'),
             title: i18n.t('forms.application.sitemap.dokumentoobor8.i-i-s-dokumentoobor8-форма-документа-l.title'),
-            icon: 'chart bar',
+            icon: 'archive',
             children: null
           }, {
             link: 'i-i-s-dokumentoobor8-утверждение-док-l',
             caption: i18n.t('forms.application.sitemap.dokumentoobor8.i-i-s-dokumentoobor8-утверждение-док-l.caption'),
             title: i18n.t('forms.application.sitemap.dokumentoobor8.i-i-s-dokumentoobor8-утверждение-док-l.title'),
-            icon: 'edit',
             children: null
           }, {
             link: 'i-i-s-dokumentoobor8-документ-не-ут-l',
             caption: i18n.t('forms.application.sitemap.dokumentoobor8.i-i-s-dokumentoobor8-документ-не-ут-l.caption'),
             title: i18n.t('forms.application.sitemap.dokumentoobor8.i-i-s-dokumentoobor8-документ-не-ут-l.title'),
-            icon: 'list',
+            icon: 'tags',
             children: null
           }, {
             link: 'i-i-s-dokumentoobor8-ав-пользователи-l',
             caption: i18n.t('forms.application.sitemap.dokumentoobor8.i-i-s-dokumentoobor8-ав-пользователи-l.caption'),
             title: i18n.t('forms.application.sitemap.dokumentoobor8.i-i-s-dokumentoobor8-ав-пользователи-l.title'),
-            icon: 'suitcase',
+            icon: 'archive',
             children: null
           }, {
             link: 'i-i-s-dokumentoobor8-сотрудники-l',
             caption: i18n.t('forms.application.sitemap.dokumentoobor8.i-i-s-dokumentoobor8-сотрудники-l.caption'),
             title: i18n.t('forms.application.sitemap.dokumentoobor8.i-i-s-dokumentoobor8-сотрудники-l.title'),
-            icon: 'chart line',
+            icon: 'building',
             children: null
           }, {
             link: 'i-i-s-dokumentoobor8-должность-l',
             caption: i18n.t('forms.application.sitemap.dokumentoobor8.i-i-s-dokumentoobor8-должность-l.caption'),
             title: i18n.t('forms.application.sitemap.dokumentoobor8.i-i-s-dokumentoobor8-должность-l.title'),
-            icon: 'archive',
+            icon: 'paperclip',
             children: null
           }, {
             link: 'i-i-s-dokumentoobor8-вход-в-систему-l',
             caption: i18n.t('forms.application.sitemap.dokumentoobor8.i-i-s-dokumentoobor8-вход-в-систему-l.caption'),
             title: i18n.t('forms.application.sitemap.dokumentoobor8.i-i-s-dokumentoobor8-вход-в-систему-l.title'),
-            icon: 'briefcase',
+            icon: 'list',
             children: null
           }]
         }
